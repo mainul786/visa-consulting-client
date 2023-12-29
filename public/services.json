@@ -1,6 +1,6 @@
 [
     {
-      "id": 1,
+      
       "name": "Student Visa",
       "image": "https://i.imgur.com/LjZAOIx.jpg",
       "price": 500,
@@ -8,7 +8,7 @@
       "details": "We are immigration firm dealing with providing study permits for students aspiring to study abroad."
     },
     {
-      "id": 2,
+      
       "name": "Permanent Visa",
       "image": "https://i.imgur.com/zSwBVaz.jpg",
       "price": 1500,
@@ -16,7 +16,7 @@
       "details": "Be It skilled Labour, PNP, businessmen & investors we help akk of them with getting permanent visas"
     },
     {
-      "id": 3,
+      
       "name": "Temporary Visa",
       "image": "https://i.imgur.com/FsCbUPj.jpg",
       "price": 1200,
@@ -24,7 +24,7 @@
       "details": "We help Our clients in getting all sorts of temporary work visa permits as and when they need it."
     },
     {
-      "id": 4,
+     
       "name": "counselling For Migration",
       "image": "https://i.imgur.com/IutikYT.jpg",
       "price": 2000,
@@ -32,7 +32,7 @@
       "details": "There are a number visa streams that can lead to getting your permanent immigration done."
     },
     {
-      "id": 5,
+    
       "name": "Business Visa",
       "image": "https://i.imgur.com/d9sPExD.jpg",
       "price": 2800,
@@ -40,7 +40,7 @@
       "details": "Business visa is granted to a foreign national who wants to visit India to establish an industrial/business venture or to explore possibilities to set up "
     },
     {
-      "id": 6,
+      
       "name": "Tourist visa",
       "image": "https://i.imgur.com/Klp1PYr.jpg",
       "price": 1700,
@@ -48,9 +48,9 @@
       "details": "Tourist visas allow holders to enter the country for leisure and tourism. They are usually short-term travel permits."
     },
     {
-      "id": 7,
+      
       "name": "Journalist visa",
-      "image": "https://imgur.com/SajrUKe",
+      "image": "https://imgur.com/SajrUKe.jpg",
       "price": 1200,
       "rating": 4.7,
       "details": "Journalist visa is issued to professional journalists and photographers representing recognized electronic or print media."
