@@ -6,7 +6,7 @@ import slide4 from '../../assest/image/slide-4.jpg';
 import slide5 from '../../assest/image/slide-5.jpg';
 import slide6 from '../../assest/image/slide-6.jpg';
 import Carousel from 'react-bootstrap/Carousel';
-// import ExampleCarouselImage from 'components/ExampleCarouselImage';
+
 
 
 const bannerItem = [
