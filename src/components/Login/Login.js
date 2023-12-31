@@ -29,8 +29,9 @@ const Login = () => {
     }
 
     return (
-       <div>
-         <form onSubmit={handleLogin}>
+       <div className='mt-4 '>
+         <div className='mb-4'>
+         <form onSubmit={handleLogin} className='w-75 mx-auto border border-2 rounded p-2'>
             <div className="mb-3 ">
                 <label for="exampleInputEmail1" className="form-label">Email address</label>
                 <input type="email" name='email' className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
@@ -42,8 +43,9 @@ const Login = () => {
             </div>
             <button type="submit" className="btn btn-primary">Submit</button>
         </form>
-
-        <div>
+        
+         </div>
+        <div className='pb-2 w-75 mx-auto'>
             <button className='btn btn-warning' onClick={handleGoogleLogin}>Google Login</button>
         </div>
        </div>

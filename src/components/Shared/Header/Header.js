@@ -9,8 +9,6 @@ import { UserContext } from '../../context/AuthContext/AuthContext';
 
 const Header = () => {
   const { user, logOut } = useContext(UserContext);
-  console.log(user?.uid);
-
 
   const handleLogOut = () =>{
     logOut()
