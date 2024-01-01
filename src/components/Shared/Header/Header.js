@@ -35,7 +35,8 @@ const Header = () => {
                 </>
                 :
                  <Link to='/login' className='text-decoration-none'>Login</Link>
-            }
+                }
+                <Link to='/blog' className='text-decoration-none'>Blog</Link>
           </Nav>
         </Navbar.Collapse>
       </Container>
