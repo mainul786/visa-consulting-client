@@ -10,13 +10,13 @@ import { UserContext } from '../../context/AuthContext/AuthContext';
 const Header = () => {
   const { user, logOut } = useContext(UserContext);
 
-  const handleLogOut = () =>{
+  const handleLogOut = () => {
     logOut()
-    .then(result => {
-      const user = result.user;
-      console.log(user)
-    })
-    .catch(error => console.log(error));
+      .then(result => {
+        const user = result.user;
+        console.log(user)
+      })
+      .catch(error => console.log(error));
   }
 
   return (
@@ -31,12 +31,16 @@ const Header = () => {
               user?.uid ?
                 <>
                   <Link to='/' onClick={handleLogOut} className='text-decoration-none'>LogOut</Link>
-                  <Link to='/login' className='text-decoration-none'>Login</Link>
+                  <Link to='/reviews' className='text-decoration-none'>My reviews</Link>
+                  <Link to='/AddService' className='text-decoration-none'>Add service</Link>
                 </>
                 :
-                 <Link to='/login' className='text-decoration-none'>Login</Link>
-                }
-                <Link to='/blog' className='text-decoration-none'>Blog</Link>
+                <>
+                  <Link to='/login' className='text-decoration-none'>Login</Link>
+                  <Link to='/signup' className='text-decoration-none'>SignUp</Link>
+                </>
+            }
+            <Link to='/blog' className='text-decoration-none'>Blog</Link>
           </Nav>
         </Navbar.Collapse>
       </Container>
