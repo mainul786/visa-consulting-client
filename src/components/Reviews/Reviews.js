@@ -12,6 +12,18 @@ const Reviews = () => {
             })
     }, [])
 
+    const handleDelete = id => {
+        fetch(`http://localhost:5000/reviews/${id}`, {
+            method: 'DELETE',
+        })
+            .then(res => res.json())
+            .then(data => {
+                if(data.deletedCount > 0){
+                    alert('deleted succssfully')
+                }
+            })
+
+    }
     return (
         <Table striped bordered hover className='mt-4'>
             <thead>
@@ -24,23 +36,23 @@ const Reviews = () => {
                 </tr>
             </thead>
             <tbody>
-            
-
-                    {
-                        reviews.map(review =>
-                            <tr>
-                                <td>{review?.name}</td>
-                                <td>{review?.email}</td>
-                                <td>{review?.photoURL}</td>
-                                <td>
-                                    <button className='btn btn-primary me-4'>Edit</button>
-                                    <button className='btn btn-warning'>Delete</button>
-                                </td>
-                            </tr>
-                        )
 
 
-                    }                                                                                                                                                                                                                                
+                {
+                    reviews.map(review =>
+                        <tr>
+                            <td>{review?.name}</td>
+                            <td>{review?.email}</td>
+                            <td>{review?.photo}</td>
+                            <td>
+                                <button className='btn btn-primary me-4'>Edit</button>
+                                <button onClick={() => handleDelete(review?._id)} className='btn btn-warning'>Delete</button>
+                            </td>
+                        </tr>
+                    )
+
+
+                }
             </tbody>
         </Table>
     );
