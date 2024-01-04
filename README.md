@@ -1,3 +1,13 @@
+*firebase email and password signup
+*firebase email and password login
+*google sign in
+*react-photo-view package uses
+*mongodb connect with client site
+*data insertin mongodb
+*data read in mongodb
+*data delete in mongodb
+data update in mongodb
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
