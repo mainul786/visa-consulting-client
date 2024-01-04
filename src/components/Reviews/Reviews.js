@@ -1,8 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import Table from 'react-bootstrap/Table';
+import { useNavigate } from 'react-router-dom';
+
 
 const Reviews = () => {
     const [reviews, setReviews] = useState([]);
+    const [refresh, setRefresh] = useState(false);
 
     useEffect(() => {
         fetch(`http://localhost:5000/reviews`)
@@ -10,7 +13,7 @@ const Reviews = () => {
             .then(data => {
                 setReviews(data)
             })
-    }, [])
+    }, [refresh])
 
     const handleDelete = id => {
         fetch(`http://localhost:5000/reviews/${id}`, {
@@ -18,11 +21,16 @@ const Reviews = () => {
         })
             .then(res => res.json())
             .then(data => {
-                if(data.deletedCount > 0){
+                if (data.deletedCount > 0) {
                     alert('deleted succssfully')
+                    setRefresh(!refresh);
                 }
             })
 
+    }
+    const navigate =useNavigate();
+    const handleEdit = id => {
+        navigate(`/edit/${id}`)
     }
     return (
         <Table striped bordered hover className='mt-4'>
@@ -40,12 +48,12 @@ const Reviews = () => {
 
                 {
                     reviews.map(review =>
-                        <tr>
+                        <tr key={review._id}>
                             <td>{review?.name}</td>
                             <td>{review?.email}</td>
                             <td>{review?.photo}</td>
                             <td>
-                                <button className='btn btn-primary me-4'>Edit</button>
+                                <button onClick={() => handleEdit(review?._id)} className='btn btn-primary me-4'>Edit</button>
                                 <button onClick={() => handleDelete(review?._id)} className='btn btn-warning'>Delete</button>
                             </td>
                         </tr>

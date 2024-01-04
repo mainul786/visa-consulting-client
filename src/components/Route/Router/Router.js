@@ -9,6 +9,7 @@ import Reviews from "../../Reviews/Reviews";
 import AddServices from "../../Home/Services/AddServices/AddServices";
 import PrivateRoute from './../../PrivateRoute/PrivateRoute';
 import ServiceDetails from "../../Home/Services/ServiceDetails/ServiceDetails";
+import ReviewEdit from "../../Reviews/ReviewEdit/ReviewEdit";
 
  const router = createBrowserRouter([
     {
@@ -43,6 +44,10 @@ import ServiceDetails from "../../Home/Services/ServiceDetails/ServiceDetails";
             {
                 path:'/reviews',
                 element:<Reviews></Reviews>
+            },
+            {
+                path:'/edit/:id',
+                element:<ReviewEdit></ReviewEdit>
             },
             {
                 path:'/addService',
