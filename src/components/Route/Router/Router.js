@@ -5,7 +5,10 @@ import Service from "../../Home/Services/Service";
 import Login from "../../Login/Login";
 import Blog from "../../Blog/Blog";
 import SignUp from "../../signUp/SignUp";
-import ServiceCard from "../../Home/Services/ServiceCard/ServiceCard";
+import Reviews from "../../Reviews/Reviews";
+import AddServices from "../../Home/Services/AddServices/AddServices";
+import PrivateRoute from './../../PrivateRoute/PrivateRoute';
+import ServiceDetails from "../../Home/Services/ServiceDetails/ServiceDetails";
 
  const router = createBrowserRouter([
     {
@@ -33,9 +36,17 @@ import ServiceCard from "../../Home/Services/ServiceCard/ServiceCard";
                 element:<SignUp></SignUp>
             },
             {
-                path:'/service/:id',
-                element:<ServiceCard></ServiceCard>,
+                path:'/services/:id',
+                element:<PrivateRoute><ServiceDetails></ServiceDetails></PrivateRoute>,
                 loader:({params})=> fetch(`http://localhost:5000/services/${params.id}`)
+            },
+            {
+                path:'/reviews',
+                element:<Reviews></Reviews>
+            },
+            {
+                path:'/addService',
+                element:<PrivateRoute><AddServices></AddServices></PrivateRoute>
             }
         ]
     }

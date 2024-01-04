@@ -2,12 +2,12 @@ import React from 'react';
 
 const Imagration = () => {
     return (
-        <div class="container mt-5">
-            <div class="row">
-                <div class="col">
+        <div className="container mt-5">
+            <div className="row">
+                <div className="col">
                     <iframe width="450" height="345" src="https://www.youtube.com/embed/tgbNymZ7vqY" alt='' /> 
                 </div>
-                <div class="col">
+                <div className="col">
                     <iframe width="450" height="345" src="https://www.youtube.com/embed/tgbNymZ7vqY" alt=''>
                     </iframe>
                 </div>

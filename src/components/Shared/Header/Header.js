@@ -26,21 +26,22 @@ const Header = () => {
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto d-flex align-items-center justify-content-center">
-            <Link to='/' className='text-decoration-none'>Home</Link>
+            
+            <Nav.Link><Link to='/' className='text-decoration-none'>Home</Link></Nav.Link>
+            <Nav.Link> <Link to='/blog' className='text-decoration-none'>Blog</Link></Nav.Link>
             {
               user?.uid ?
                 <>
-                  <Link to='/' onClick={handleLogOut} className='text-decoration-none'>LogOut</Link>
-                  <Link to='/reviews' className='text-decoration-none'>My reviews</Link>
-                  <Link to='/AddService' className='text-decoration-none'>Add service</Link>
+                  <Nav.Link> <Link to='/reviews' className='text-decoration-none'>My reviews</Link></Nav.Link>
+                  <Nav.Link> <Link to='/addService' className='text-decoration-none'>Add service</Link></Nav.Link>
+                  <Nav.Link> <Link to='/' onClick={handleLogOut} className='text-decoration-none'>LogOut</Link> </Nav.Link>
                 </>
                 :
                 <>
-                  <Link to='/login' className='text-decoration-none'>Login</Link>
-                  <Link to='/signup' className='text-decoration-none'>SignUp</Link>
+                 <Nav.Link> <Link to='/login' className='text-decoration-none'>Login</Link></Nav.Link>
+                 <Nav.Link><Link to='/signup' className='text-decoration-none'>SignUp</Link></Nav.Link>
                 </>
             }
-            <Link to='/blog' className='text-decoration-none'>Blog</Link>
           </Nav>
         </Navbar.Collapse>
       </Container>
