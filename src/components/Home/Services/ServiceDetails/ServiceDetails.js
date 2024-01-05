@@ -1,8 +1,9 @@
 import React from 'react';
-import { useLoaderData } from 'react-router-dom';
+import useLoaderData from 'react-router-dom';
 
 
 const ServiceDetails = () => {
+ 
    const {name, details, image } = useLoaderData();
    
    const handleReviews = event =>{
@@ -20,7 +21,7 @@ const ServiceDetails = () => {
         password:password
     }
 
-    fetch(`http://localhost:5000/reviews`, {
+    fetch(`https://visa-consulting-server.vercel.app/reviews`, {
         method:'POST',
         headers:{
             'content-type':'application/json'

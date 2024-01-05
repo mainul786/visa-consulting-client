@@ -39,7 +39,7 @@ import ReviewEdit from "../../Reviews/ReviewEdit/ReviewEdit";
             {
                 path:'/services/:id',
                 element:<PrivateRoute><ServiceDetails></ServiceDetails></PrivateRoute>,
-                loader:({params})=> fetch(`http://localhost:5000/services/${params.id}`)
+                loader:({params})=> fetch(`https://visa-consulting-server.vercel.app/services/${params.id}`)
             },
             {
                 path:'/reviews',

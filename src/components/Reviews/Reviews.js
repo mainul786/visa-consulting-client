@@ -8,7 +8,7 @@ const Reviews = () => {
     const [refresh, setRefresh] = useState(false);
 
     useEffect(() => {
-        fetch(`http://localhost:5000/reviews`)
+        fetch(`https://visa-consulting-server.vercel.app/reviews`)
             .then(res => res.json())
             .then(data => {
                 setReviews(data)
@@ -16,7 +16,7 @@ const Reviews = () => {
     }, [refresh])
 
     const handleDelete = id => {
-        fetch(`http://localhost:5000/reviews/${id}`, {
+        fetch(`https://visa-consulting-server.vercel.app/reviews/${id}`, {
             method: 'DELETE',
         })
             .then(res => res.json())

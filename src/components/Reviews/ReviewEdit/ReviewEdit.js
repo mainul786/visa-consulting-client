@@ -8,7 +8,7 @@ const ReviewEdit = () => {
     const [refresh, setRefresh] = useState(false);
 
     useEffect(() => {
-        fetch(`http://localhost:5000/reviews/${id}`)
+        fetch(`https://visa-consulting-server.vercel.app/reviews/${id}`)
             .then(res => res.json())
             .then(data => {
                 setReviews(data)
@@ -22,7 +22,7 @@ const ReviewEdit = () => {
             email:event.target.email.value,
             photo:event.target.photoURL.value,
         }
-       fetch(`http://localhost:5000/reviews/${id}`,{
+       fetch(`https://visa-consulting-server.vercel.app/reviews/${id}`,{
         method:'PATCH',
         headers:{
             'content-type':'application/json'

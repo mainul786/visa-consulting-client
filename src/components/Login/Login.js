@@ -1,8 +1,12 @@
 import React, { useContext } from 'react';
 import { UserContext } from '../context/AuthContext/AuthContext';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 const Login = () => {
     const { login, googleLogin } = useContext(UserContext);
+    const navigate = useNavigate();
+    const location = useLocation();
+    const from = location.state?.from?.pathname || "/";
 
     const handleLogin = event =>{
         event.preventDefault();
@@ -14,6 +18,7 @@ const Login = () => {
         .then(result => {
             const user = result.user;
             console.log(user)
+            navigate(from, { replace: true });
         })
         .catch(err => console.error(err))
     }
